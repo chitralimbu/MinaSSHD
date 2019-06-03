@@ -31,7 +31,6 @@ public class SSHDsecond {
 		
 		
 		sshd.setCommandFactory(new ScpCommandFactory());
-		sshd.setCommandFactory((CommandFactory) new EchoShellFactory());
 		sshd.setPasswordAuthenticator(new PasswordAuthenticator() {
 			  public boolean authenticate(String username, String password, ServerSession session) {
 			    if ((username.equals("admin")) && (password.equals("admin"))) {
