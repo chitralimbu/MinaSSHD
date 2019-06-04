@@ -36,7 +36,7 @@ public class SSHDMain {
 		sshd.setPasswordAuthenticator(new PasswordAuthenticator() {
 		  public boolean authenticate(String username, String password, ServerSession session) {
 		    if ((username.equals("admin")) && (password.equals("admin"))) {
-		      sshd.setFileSystemFactory(new VirtualFileSystemFactory(new File("C:\\Users\\limbu\\Documents\\sshTest").toPath()));
+		      sshd.setFileSystemFactory(new VirtualFileSystemFactory(new File("path").toPath()));
 		      return true;
 		    }
 		    return false;
