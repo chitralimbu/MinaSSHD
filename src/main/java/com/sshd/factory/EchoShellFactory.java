@@ -45,7 +45,7 @@ public class EchoShellFactory implements Factory<Command>{
 					if(s == null) {
 						return;
 					}
-					out.write((s + "\n").getBytes());
+					out.write(( "Hello: " + s + "\n").getBytes());
 					out.flush();
 					if("exit".equals(s)) {
 						return;
